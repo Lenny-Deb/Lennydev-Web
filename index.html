@@ -1,2 +1,200 @@
-<h1>Lenny_Dev</h1>
-<p>HOLA</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenny_Dev</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/assets/logos/lennydev32.png">
+
+</head>
+
+<body>
+
+    <div id="boxTop">
+
+        <table>
+                
+              <tr> 
+                <th>
+                        <img width="100px" src="/assets/logos/lennydev512.png" alt="">
+                </th>
+
+                <th>
+                        <img id="lennydevtext" src="/assets/logos/lennydevtext.png" alt="">
+                        <a href="https://store.steampowered.com/developer/lenny_dev" target="_blank"><img class="imgPromotional" width="50px" src="/assets/promotional/steam.png" alt=""></a>
+                        <a href="https://lenny-dev.itch.io" target="_blank"><img class="imgPromotional" width="50px" src="/assets/promotional/itchio.png" alt=""></a>
+                </th>
+                    
+            </tr>
+
+        </table>
+
+            <span>
+                <button id="buttonStart">Start</button>
+                <button id="buttonProjects">Projects</button>
+                <button id="buttonAbout">About Me</button>
+                <button id="buttonContact">Contact</button>
+                <button id="buttonHide">:D</button>
+            </span>
+            
+            
+    </div>
+
+    
+
+    <!--Start-->
+    <div class="section" id="sectionStart">
+        <h1>-Start-</h1>
+
+        <p>Hi, i'm Lenny, an indie game developer from Spain, ¡Welcome to my site!</p>
+
+        <p>I make games when I am bored and sometimes something goes well and I end creating a whole videogame.</p>
+    </div>
+
+    <p class="divisor">~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~</p>
+    
+    <!--Projects-->
+    <div class="section" id="sectionProjects">
+        <h1>-Projects-</h1>
+
+        <div class="project">
+            <a href="https://helpingani.neocities.org/" target="_blank">
+            <img class="imgProjects" src="assets/projects/helpingAni.png" alt="">
+            </a>
+            <p>Helping Ani</p>
+        </div>
+
+    </div>
+
+    <p class="divisor">~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~</p>
+
+    <!--About Me-->
+    <div class="section" id="sectionAbout">
+        <h1>-About Me-</h1>
+
+        <div class="section" id="sectionAboutText">
+
+            <p>
+                Hi, I'm Lenny_Dev, but my real name is Ian. I'm an indie game dev from Spain who started
+                to make games because I loved the idea of creating my own worlds. I usually use Godot 4
+                for my projects, but I'm also very familiarized with RPG Maker and Game Maker Studio.
+            </p>
+            <p>
+                I work ALL by myself, I don't have any publishers of programmers hired, I'm a single
+                person who likes to create videogames in their room, I handle all my webs, social media
+                accounts, everything. So yeah, I'm kind of real.
+            </p>
+            <p>
+                I only do 2D games (for now), but I would like to try some 3D stuff, I kind of used Cinema
+                4D it to make FNaF animations a while ago. In my games, I also do ALL of the work, programming,
+                drawing, composing, everything. I like to have the control of my stuff.
+            </p>
+            <p>
+                Now time for some personal stuff, you can refer to me as you want, you can treat me like a boy,
+                like a girl or like non-binary, I don't really care and don't think that is really important. To
+                contact to me, you can use the ways below.
+            </p>
+
+        </div>
+
+    </div>
+
+    <p class="divisor">~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~</p>
+
+    <!--Contact-->
+    <div class="section" id="sectionContact">
+        <h1>-Contact-</h1>
+
+        <h3>For personal tratement</h3>
+        <a class="link" href="https://twitter.com/lennydev_" target="_blank">X</a>
+
+        
+        <h3>For commercial tratement</h3>
+        <a class="link" href="mailto:lennydev@gmail.com" target="_blank">lennydev@gmail.com</a>
+
+    </div>
+
+</body>
+
+<script>
+
+    //VARIABLES/////////////////////////////////////////////////
+
+    var buttonStart = document.getElementById("buttonStart");
+    var sectionStart = document.getElementById("sectionStart")
+
+    var buttonProjects = document.getElementById("buttonProjects")
+    var sectionProjects = document.getElementById("sectionProjects")
+
+    var buttonAbout = document.getElementById("buttonAbout")
+    var sectionAbout = document.getElementById("sectionAbout")
+
+    var buttonContact = document.getElementById("buttonContact")
+    var sectionContact = document.getElementById("sectionContact")
+
+    var buttonHide = document.getElementById("buttonHide")
+
+    var root = document.documentElement;
+    var hide = false;
+
+    //FUNCTIONS/////////////////////////////////////////////////
+
+    //Start
+    buttonStart.addEventListener("click", function(){
+        sectionStart.scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+
+    //Projects
+    buttonProjects.addEventListener("click", function(){
+        sectionProjects.scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+
+    //About Me
+    buttonAbout.addEventListener("click", function(){
+        sectionAbout.scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+
+    //Contact
+    buttonContact.addEventListener("click", function(){
+        sectionContact.scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+
+    //Hide
+    buttonHide.addEventListener("click", function(){
+
+        if (hide == true){ //If it's shown
+            root.style.setProperty('--box-position-y', '-4em');
+            buttonHide.textContent = (":D")
+            hide = false;
+        }else{ //If it's hidden
+            root.style.setProperty('--box-position-y', '-1em');
+            buttonHide.textContent = (":)")
+            hide = true;
+        }
+
+    })
+
+    //Pruebas
+    document.addEventListener('keydown', function(event) {
+        if(event.keyCode == 37) {
+            //alert('Left was pressed');
+        }
+        else if(event.keyCode == 39) {
+            //alert('Right was pressed');
+        }
+    });
+
+</script>
+
+</html>

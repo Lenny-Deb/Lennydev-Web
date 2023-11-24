@@ -1,0 +1,128 @@
+:root{
+    --red1: #D95763;
+    --blue1: #639BFF;
+    --blue2: #5B6EE1;
+    --blue3: #3F3F74;
+    --blue4: #222034;
+    --blue4-opacity: #222034a1;
+
+    /*Box Position Y*/
+    --box-position-y: -4em;
+
+    /*Box Position X*/
+    --box-position-x: 0em;
+}
+
+@font-face {
+    font-family: Fontika;
+    src: url(/assets/fonts/Fontika.ttf);
+}
+
+body{
+    font-family: Fontika;
+
+    background: rgb(34,32,52);
+    background: linear-gradient(0deg, rgba(34,32,52,1) 0%, rgba(63,63,116,1) 100%);
+
+    color: white;
+    font-size: 48px;
+}
+
+button{
+    background-color: var(--blue2);
+    border: var(--blue3) solid 3px;
+
+    color: white;
+    font-family: Fontika;
+    font-size: 32px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    height: 50px;
+
+    text-align: center;
+
+    display: inline-block;
+}
+
+button:hover{
+    color: var(--red1);
+    background-color: var(--blue3);
+
+    cursor: pointer;
+}
+
+#boxTop{
+    padding: 15px;
+    background-color: var(--blue4-opacity);
+    border-radius: 10px;
+
+    display: block;
+    position: fixed;
+
+    transform: translateY(var(--box-position-y));
+
+    transition: all 0.5s ease;
+}
+
+#buttonHide{
+    width: 64px;
+}
+
+.section{
+    text-align: center;
+}
+
+.divisor{
+    text-align: center;
+    font-size: 1em;
+}
+
+.imgProjects{
+    width: 256px;
+
+    border: 2px white solid;
+
+    margin-bottom: -64px;
+}
+
+.imgProjects:hover{
+    width: 256px;
+
+    border: 2px var(--red1) solid;
+
+    cursor: pointer;
+}
+
+#lennydevtext{
+    margin-right: 40px;
+}
+
+.imgPromotional:hover{
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    border: 2px white solid;
+}
+
+#sectionAboutText{
+    font-size: 32px;
+
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h3{
+    margin-bottom: -8px;
+}
+
+.link{
+    color: white;
+}
+
+.link:hover{
+    color: var(--red1);
+    cursor: pointer;
+}
